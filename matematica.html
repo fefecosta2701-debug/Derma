@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Matemática — DermaNova</title>
+<meta name="description" content="DermaNova — DermaSkin, uma matriz regenerativa personalizada. Projeto interdisciplinar de Biotecnologia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="nav-scrim" id="navScrim"></div>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <img src="images/logo.jpg" alt="Logo DermaNova">
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <nav class="links" id="navLinks">
+      <a href="index.html">Início</a>
+      <a href="a-startup.html">A Startup</a>
+      <a href="biologia.html">Biologia</a>
+      <a href="quimica.html">Química</a>
+      <a href="fisica.html">Física</a>
+      <a href="matematica.html" class="active">Matemática</a>
+      <a href="integracao.html">Integração</a>
+      <a href="decisoes.html">Decisões</a>
+      <a href="riscos.html">Riscos</a>
+      <a href="conclusao.html">Conclusão</a>
+      <a href="equipe.html">Equipe</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="wrap">
+    <div class="kicker"><span class="idx mono">05</span>CAPÍTULO 6</div>
+    <h1>Matemática</h1>
+    <p class="lede">Crescimento celular, logaritmos e análise combinatória — com calculadora interativa.</p>
+  </div>
+</div>
+
+<section style="padding-top:56px;">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">CRESCIMENTO CELULAR</div>
+      <h2>Função exponencial</h2>
+      <p>Modelo didático para o crescimento de uma cultura celular em laboratório: 10.000 células iniciais, crescendo 60% a cada ciclo de 12 horas.</p>
+    </div>
+    <div class="eq-block">Q(t) = 10.000 · 1,6ᵗ</div>
+    <p style="color:var(--ink-soft);">Arraste o controle para ver a quantidade de células estimada em cada ciclo:</p>
+    <div class="calc-box">
+      <div class="calc-row">
+        <label for="cycleRange">CICLOS (t) — 1 CICLO = 12H</label>
+        <input type="range" id="cycleRange" min="0" max="6" value="3" step="1">
+        <span class="calc-readout"><span id="cycleVal">3</span></span>
+      </div>
+      <div class="calc-row">
+        <label>QUANTIDADE ESTIMADA</label>
+        <span class="calc-readout"><span id="cellVal">40.960</span><span class="unit">células, em <span id="hourVal">36</span>h</span></span>
+      </div>
+      <svg id="growthChart" viewBox="0 0 640 220" preserveAspectRatio="none"></svg>
+      <p class="calc-hint">Dica: clique em qualquer ponto do gráfico para pular direto para aquele ciclo.</p>
+    </div>
+    <p style="color:var(--ink-soft);font-size:14px;margin-top:14px;">Esse é um modelo didático: uma cultura real tem limites de nutrientes, espaço e condições ambientais.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">LOGARITMO</div>
+      <h2>Quando a cultura passa de 100.000 células?</h2>
+    </div>
+    <div class="eq-block">10.000 · 1,6ᵗ = 100.000
+1,6ᵗ = 10
+t = log(10) / log(1,6) ≈ 4,9</div>
+    <p style="color:var(--ink-soft);">Como o cultivo é contado em ciclos completos, são necessários <strong style="color:var(--ink);">5 ciclos (60 horas)</strong> para ultrapassar 100.000 células no modelo.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">ANÁLISE COMBINATÓRIA</div>
+      <h2>Três situações do controle de qualidade.</h2>
+      <p>Cada situação pede uma ferramenta diferente — escolha uma para ver o cálculo:</p>
+    </div>
+    <div class="combo-selector">
+      <button class="combo-btn active" data-combo="perm">Permutação</button>
+      <button class="combo-btn" data-combo="arr">Arranjo</button>
+      <button class="combo-btn" data-combo="comb">Combinação</button>
+    </div>
+    <div class="combo-out active" id="combo-perm">
+      <p><strong>5 etapas de controle de qualidade</strong> (esterilidade, viabilidade, identidade celular, estabilidade genética, integração da matriz) organizadas em sequência, usando todas de uma vez — a ordem importa.</p>
+      <div class="eq-block">P₅ = 5! = 5·4·3·2·1 = 120</div>
+      <p>120 sequências possíveis para organizar os 5 testes.</p>
+    </div>
+    <div class="combo-out" id="combo-arr">
+      <p><strong>3 de 6 testes disponíveis</strong> (esterilidade, viabilidade, compatibilidade, degradação, campo e proliferação) serão selecionados e executados em uma ordem definida — nem todos os testes são usados, e a posição importa.</p>
+      <div class="eq-block">A₆,₃ = 6!/(6−3)! = 6·5·4 = 120</div>
+      <p>120 sequências possíveis de três testes, entre os seis disponíveis.</p>
+    </div>
+    <div class="combo-out" id="combo-comb">
+      <p><strong>4 de 8 condições de cultivo</strong> serão escolhidas para formar um conjunto de comparação — a ordem entre elas não importa, apenas quais foram selecionadas.</p>
+      <div class="eq-block">C₈,₄ = 8!/(4!·4!) = (8·7·6·5)/(4·3·2·1) = 70</div>
+      <p>70 grupos possíveis de 4 condições, entre as 8 disponíveis.</p>
+    </div>
+  </div>
+</section>
+
+<nav class="page-nav" aria-label="Navegação entre páginas">
+  <div class="page-nav-inner">
+    <a href="fisica.html" class="prev">
+        <span class="dir mono">&larr; ANTERIOR</span>
+        <span class="ttl">Física</span>
+      </a>
+    <a href="integracao.html" class="next">
+        <span class="dir mono">PRÓXIMO &rarr;</span>
+        <span class="ttl">Integração</span>
+      </a>
+  </div>
+</nav>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>DermaNova — projeto fictício desenvolvido para fins escolares. Colégio Franciscano Nossa Senhora do Carmo, 2026.</p>
+    <p class="mono">CIÊNCIAS DA NATUREZA E MATEMÁTICA</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

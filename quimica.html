@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Química — DermaNova</title>
+<meta name="description" content="DermaNova — DermaSkin, uma matriz regenerativa personalizada. Projeto interdisciplinar de Biotecnologia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="https://3Dmol.org/build/3Dmol-min.js"></script>
+</head>
+<body>
+
+<div class="nav-scrim" id="navScrim"></div>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <img src="images/logo.jpg" alt="Logo DermaNova">
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <nav class="links" id="navLinks">
+      <a href="index.html">Início</a>
+      <a href="a-startup.html">A Startup</a>
+      <a href="biologia.html">Biologia</a>
+      <a href="quimica.html" class="active">Química</a>
+      <a href="fisica.html">Física</a>
+      <a href="matematica.html">Matemática</a>
+      <a href="integracao.html">Integração</a>
+      <a href="decisoes.html">Decisões</a>
+      <a href="riscos.html">Riscos</a>
+      <a href="conclusao.html">Conclusão</a>
+      <a href="equipe.html">Equipe</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="wrap">
+    <div class="kicker"><span class="idx mono">03</span>CAPÍTULO 4</div>
+    <h1>Química</h1>
+    <p class="lede">Ácido hialurônico e as três reações que dão forma à matriz da DermaSkin.</p>
+  </div>
+</div>
+
+<section style="padding-top:56px;">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">SUBSTÂNCIA ORGÂNICA ESCOLHIDA</div>
+      <h2>Ácido hialurônico: a base de tudo.</h2>
+      <p>Um polissacarídeo formado pela repetição de ácido D-glucurônico (GlcA) e N-acetil-D-glucosamina (GlcNAc), unidos por ligações glicosídicas. É a base da matriz da DermaSkin: hidratação, suporte celular, passagem de nutrientes e liberação gradual de moléculas bioativas.</p>
+    </div>
+    <div style="display:flex;gap:40px;flex-wrap:wrap;align-items:center;">
+      <div class="mol-figure" style="max-width:280px;">
+        <img src="images/quimica/r1_produto_acido_hialuronico.jpg" alt="Estrutura molecular do ácido hialurônico" style="max-width:280px;border:1px solid var(--line);border-radius:3px;padding:12px;background:#FAFCFB;">
+      </div>
+      <div class="table-scroll" style="flex:1;min-width:280px;">
+        <table class="info">
+          <tr><th>Fórmula molecular</th><td>(C₁₄H₂₃NO₁₂)ₙ — unidade repetitiva</td></tr>
+          <tr><th>Funções orgânicas</th><td>Ácido carboxílico (–COOH), álcool (–OH), amida (–CONH–) e éter (C–O–C)</td></tr>
+          <tr><th>Importância</th><td>Forma uma matriz hidratada e biodegradável</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">REAÇÃO 1</div>
+      <h2>Formação de ligações glicosídicas</h2>
+      <p>Polimerização por condensação entre as duas unidades, formando a cadeia do ácido hialurônico.</p>
+    </div>
+    <div class="reaction-block">
+      <div class="reaction-row">
+        <div class="reaction-figure">
+          <div class="mol-figure">
+            <div class="mol-panel mol-panel-2d active"><img src="images/quimica/r1_reagente_glucuronico.jpg" alt="Ácido D-glucurônico"></div>
+            <div class="mol-panel mol-panel-3d"><div class="mol3d-box" data-cid="441478"></div><p class="mol3d-hint">arraste para girar</p></div>
+            <div class="mol-tabs"><button class="mol-tab active" data-target="2d" type="button">2D</button><button class="mol-tab" data-target="3d" type="button">3D</button></div>
+          </div>
+          <span class="fig-label">Ácido D-glucurônico</span>
+        </div>
+        <div class="reaction-op">+</div>
+        <div class="reaction-figure">
+          <div class="mol-figure">
+            <div class="mol-panel mol-panel-2d active"><img src="images/quimica/r1_reagente_acetilglucosamina.jpg" alt="N-acetil-D-glucosamina"></div>
+            <div class="mol-panel mol-panel-3d"><div class="mol3d-box" data-cid="439174"></div><p class="mol3d-hint">arraste para girar</p></div>
+            <div class="mol-tabs"><button class="mol-tab active" data-target="2d" type="button">2D</button><button class="mol-tab" data-target="3d" type="button">3D</button></div>
+          </div>
+          <span class="fig-label">N-acetil-D-glucosamina</span>
+        </div>
+        <div class="reaction-arrow">condensação<div class="line"></div></div>
+        <div class="reaction-figure">
+          <div class="mol-figure">
+            <img src="images/quimica/r1_produto_acido_hialuronico.jpg" alt="Cadeia de ácido hialurônico">
+          </div>
+          <span class="fig-label">Cadeia de ácido hialurônico</span>
+        </div>
+      </div>
+      <p class="reaction-caption">Duas unidades menores se conectam por ligações C–O–C, formando uma cadeia polimérica maior.</p>
+    </div>
+    <table class="mini">
+      <tr><th>Tipo de reação</th><td>Polimerização por condensação, com formação de ligações glicosídicas</td></tr>
+      <tr><th>Funções antes</th><td>Álcool, ácido carboxílico, amida e grupos hidroxila</td></tr>
+      <tr><th>Funções depois</th><td>Éter glicosídico, álcool, ácido carboxílico e amida</td></tr>
+      <tr><th>Importância</th><td>Forma a cadeia que retém água e sustenta as células</td></tr>
+    </table>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">REAÇÃO 2</div>
+      <h2>Esterificação e reticulação</h2>
+      <p>O grupo ácido carboxílico do ácido hialurônico reage com o grupo álcool de um agente reticulante.</p>
+    </div>
+    <div class="reaction-block">
+      <div class="reaction-row">
+        <div class="reaction-figure"><img src="images/quimica/r2_reagentes.png" alt="Ácido carboxílico + álcool do reticulante"><span class="fig-label">Ácido carboxílico + álcool do reticulante</span></div>
+        <div class="reaction-arrow">esterificação<div class="line"></div></div>
+        <div class="reaction-figure"><img src="images/quimica/r2_produto.png" alt="Ligação éster + água"><span class="fig-label">Ligação éster + água</span></div>
+      </div>
+      <p class="reaction-caption">Uma ligação éster passa a conectar regiões diferentes das cadeias do polímero.</p>
+    </div>
+    <table class="mini">
+      <tr><th>Tipo de reação</th><td>Esterificação</td></tr>
+      <tr><th>Funções antes</th><td>Ácido carboxílico e álcool</td></tr>
+      <tr><th>Função depois</th><td>Éster</td></tr>
+      <tr><th>Importância</th><td>Aumenta resistência, forma rede tridimensional e controla a degradação</td></tr>
+    </table>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">REAÇÃO 3</div>
+      <h2>Oxidação dos grupos hidroxila</h2>
+      <p>Oxidação de um álcool primário na cadeia do ácido hialurônico, formando um grupo ácido carboxílico.</p>
+    </div>
+    <div class="reaction-block">
+      <div class="reaction-row">
+        <div class="reaction-figure"><img src="images/quimica/r3_reagentes.jpg" alt="Álcool primário (C6)"><span class="fig-label">Álcool primário (C6)</span></div>
+        <div class="reaction-arrow">[O] · agente oxidante<div class="line"></div></div>
+        <div class="reaction-figure"><img src="images/quimica/r3_produto.png" alt="Ácido D-glucurônico + água"><span class="fig-label">Ácido D-glucurônico + água</span></div>
+      </div>
+      <p class="reaction-caption">O grupo –CH₂OH é convertido em –COOH pela ação de um agente oxidante.</p>
+    </div>
+    <table class="mini">
+      <tr><th>Tipo de reação</th><td>Oxidação</td></tr>
+      <tr><th>Função antes</th><td>Álcool</td></tr>
+      <tr><th>Função depois</th><td>Ácido carboxílico</td></tr>
+      <tr><th>Importância</th><td>Aumenta a carga negativa da molécula, favorecendo hidratação</td></tr>
+    </table>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">TRANSFORMAÇÃO ESTRUTURAL DETALHADA</div>
+      <h2>Antes e depois da esterificação / reticulação</h2>
+      <p>Na esterificação, o grupo ácido carboxílico do ácido hialurônico reage com o grupo álcool do reticulante, formando o grupo éster e água.</p>
+    </div>
+    <div class="reaction-block">
+      <div class="reaction-row">
+        <div class="reaction-figure"><img src="images/quimica/transf_antes.png" alt="Ácido hialurônico (antes)"><span class="fig-label">Ácido hialurônico (antes)</span></div>
+        <div class="reaction-arrow">esterificação / reticulação<div class="line"></div></div>
+        <div class="reaction-figure"><img src="images/quimica/transf_depois.png" alt="Após esterificação (reticulado)"><span class="fig-label">Após esterificação (reticulado)</span></div>
+      </div>
+    </div>
+    <table class="mini">
+      <tr><th>Grupo alterado</th><td>Ácido carboxílico –C(=O)OH e álcool –OH</td></tr>
+      <tr><th>Grupo no produto</th><td>Éster: –C(=O)O–R′</td></tr>
+      <tr><th>Diferença estrutural</th><td>Antes, os grupos estão separados; depois, uma ligação éster conecta cadeias diferentes</td></tr>
+      <tr><th>Consequência</th><td>A matriz fica mais resistente, menos solúvel e com degradação mais controlada</td></tr>
+    </table>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">DECISÃO QUÍMICA JUSTIFICADA</div>
+      <h2>Reticulação parcial: o meio-termo certo.</h2>
+    </div>
+    <p style="color:var(--ink-soft);">A escolha é usar ácido hialurônico <strong style="color:var(--ink);">parcialmente reticulado</strong>. Sem reticulação, a matriz se dispersaria rápido e não sustentaria as células; com reticulação excessiva, ficaria rígida e dificultaria a passagem de nutrientes. A reticulação parcial equilibra hidratação, resistência, porosidade e degradação gradual.</p>
+    <h3 style="font-size:18px;margin:32px 0 10px;">pH e temperatura no processo</h3>
+    <div style="background:var(--teal-100);border-left:3px solid var(--teal-700);border-radius:0 3px 3px 0;padding:18px 22px;margin-bottom:18px;">
+      <p style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.02em;color:var(--teal-700);margin-bottom:8px;">PERGUNTA ORIENTADORA</p>
+      <p style="margin:0;font-size:15.5px;color:var(--teal-900);line-height:1.65;">Como as variações de pH e temperatura no meio de reação afetam o rendimento da síntese/transformação do nosso produto e a integridade dos grupos funcionais presentes na molécula?</p>
+    </div>
+    <p style="color:var(--ink-soft);">O aumento de temperatura acelera a reação, mas calor excessivo degrada a molécula. Variações de pH alteram os grupos funcionais — meios muito ácidos ou básicos quebram ligações indesejadamente. Por isso o processo precisa de uma faixa controlada de temperatura e pH, garantindo produção máxima sem estragar o produto final.</p>
+  </div>
+</section>
+
+<nav class="page-nav" aria-label="Navegação entre páginas">
+  <div class="page-nav-inner">
+    <a href="biologia.html" class="prev">
+        <span class="dir mono">&larr; ANTERIOR</span>
+        <span class="ttl">Biologia</span>
+      </a>
+    <a href="fisica.html" class="next">
+        <span class="dir mono">PRÓXIMO &rarr;</span>
+        <span class="ttl">Física</span>
+      </a>
+  </div>
+</nav>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>DermaNova — projeto fictício desenvolvido para fins escolares. Colégio Franciscano Nossa Senhora do Carmo, 2026.</p>
+    <p class="mono">CIÊNCIAS DA NATUREZA E MATEMÁTICA</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

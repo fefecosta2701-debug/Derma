@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Física — DermaNova</title>
+<meta name="description" content="DermaNova — DermaSkin, uma matriz regenerativa personalizada. Projeto interdisciplinar de Biotecnologia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="nav-scrim" id="navScrim"></div>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <img src="images/logo.jpg" alt="Logo DermaNova">
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <nav class="links" id="navLinks">
+      <a href="index.html">Início</a>
+      <a href="a-startup.html">A Startup</a>
+      <a href="biologia.html">Biologia</a>
+      <a href="quimica.html">Química</a>
+      <a href="fisica.html" class="active">Física</a>
+      <a href="matematica.html">Matemática</a>
+      <a href="integracao.html">Integração</a>
+      <a href="decisoes.html">Decisões</a>
+      <a href="riscos.html">Riscos</a>
+      <a href="conclusao.html">Conclusão</a>
+      <a href="equipe.html">Equipe</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="wrap">
+    <div class="kicker"><span class="idx mono">04</span>CAPÍTULO 5</div>
+    <h1>Física</h1>
+    <p class="lede">Campo magnético, indução e energia: como o BioHeat funciona.</p>
+  </div>
+</div>
+
+<section style="padding-top:56px;">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">O EQUIPAMENTO</div>
+      <h2>BioHeat: eletromagnetismo a serviço da produção.</h2>
+      <p>Na DermaNova, o eletromagnetismo não cicatriza diretamente — é tecnologia de suporte à produção controlada da pomada.</p>
+    </div>
+    <div class="accordion">
+      <div class="accordion-item open">
+        <button class="accordion-btn">Campo magnético da bobina <span class="plus">+</span></button>
+        <div class="accordion-panel"><div class="accordion-inner">
+          <p>O BioHeat usa uma bobina percorrida por corrente alternada, produzindo o campo magnético essencial para o aquecimento por indução.</p>
+          <div class="eq-block">B = μ₀ · (N/L) · I
+N = 400 espiras · I = 0,20 A · L = 0,10 m · μ₀ = 4π×10⁻⁷ T·m/A
+
+B ≈ 1,01 × 10⁻³ T  =  1,01 mT</div>
+          <p>Quanto maior a corrente e o número de espiras, maior o campo magnético produzido.</p>
+          <div class="physics-fig" aria-label="Diagrama: bobina solenóide gerando campo magnético">
+            <svg viewBox="0 0 520 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bobina solenóide com linhas de campo magnético">
+              <defs>
+                <marker id="arrowB" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+                  <polygon points="0 0, 8 3, 0 6" fill="#1B7A72"/>
+                </marker>
+                <marker id="arrowBr" markerWidth="8" markerHeight="6" refX="1" refY="3" orient="auto">
+                  <polygon points="8 0, 0 3, 8 6" fill="#8FCFC4"/>
+                </marker>
+                <linearGradient id="coilGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#2E9B90"/>
+                  <stop offset="100%" stop-color="#0F4F4A"/>
+                </linearGradient>
+                <style>
+                  .field-line { stroke-dasharray: 200; stroke-dashoffset: 200;
+                    animation: drawLine 1.6s ease forwards; }
+                  .field-line:nth-child(2){ animation-delay:.15s; }
+                  .field-line:nth-child(3){ animation-delay:.30s; }
+                  .field-line:nth-child(4){ animation-delay:.45s; }
+                  .field-line:nth-child(5){ animation-delay:.60s; }
+                  @keyframes drawLine{ to{ stroke-dashoffset:0; } }
+                  @media(prefers-reduced-motion:reduce){ .field-line{ animation:none; stroke-dashoffset:0; } }
+                </style>
+              </defs>
+
+              <!-- background -->
+              <rect width="520" height="220" fill="#F5FAF8" rx="6"/>
+
+              <!-- solenoid body -->
+              <!-- coil turns (ellipses to give 3D look) -->
+              <g fill="none" stroke="url(#coilGrad)" stroke-width="3.5">
+                <ellipse cx="170" cy="110" rx="10" ry="38"/>
+                <ellipse cx="190" cy="110" rx="10" ry="38"/>
+                <ellipse cx="210" cy="110" rx="10" ry="38"/>
+                <ellipse cx="230" cy="110" rx="10" ry="38"/>
+                <ellipse cx="250" cy="110" rx="10" ry="38"/>
+                <ellipse cx="270" cy="110" rx="10" ry="38"/>
+                <ellipse cx="290" cy="110" rx="10" ry="38"/>
+                <ellipse cx="310" cy="110" rx="10" ry="38"/>
+                <ellipse cx="330" cy="110" rx="10" ry="38"/>
+              </g>
+              <!-- coil horizontal rails -->
+              <line x1="170" y1="72" x2="330" y2="72" stroke="#0F4F4A" stroke-width="2.5"/>
+              <line x1="170" y1="148" x2="330" y2="148" stroke="#0F4F4A" stroke-width="2.5"/>
+
+              <!-- internal field lines (left → right, inside coil) -->
+              <g stroke="#1B7A72" stroke-width="1.8" fill="none" marker-end="url(#arrowB)">
+                <line class="field-line" x1="175" y1="97"  x2="325" y2="97"/>
+                <line class="field-line" x1="175" y1="110" x2="325" y2="110"/>
+                <line class="field-line" x1="175" y1="123" x2="325" y2="123"/>
+              </g>
+
+              <!-- external field lines (loop around) -->
+              <g stroke="#8FCFC4" stroke-width="1.4" fill="none">
+                <!-- top external arc -->
+                <path class="field-line" d="M 175 72 C 175 30, 325 30, 325 72" marker-end="url(#arrowB)"/>
+                <!-- bottom external arc -->
+                <path class="field-line" d="M 325 148 C 325 190, 175 190, 175 148" marker-end="url(#arrowBr)"/>
+              </g>
+
+              <!-- N / S labels -->
+              <text x="142" y="115" font-family="IBM Plex Mono,monospace" font-size="15" font-weight="700" fill="#DA9241" text-anchor="middle">S</text>
+              <text x="358" y="115" font-family="IBM Plex Mono,monospace" font-size="15" font-weight="700" fill="#DA9241" text-anchor="middle">N</text>
+
+              <!-- B arrow label -->
+              <text x="248" y="88" font-family="IBM Plex Mono,monospace" font-size="11" fill="#1B7A72" text-anchor="middle">B →</text>
+
+              <!-- caption -->
+              <text x="260" y="210" font-family="IBM Plex Mono,monospace" font-size="10" fill="#3C5450" text-anchor="middle">Bobina solenóide — linhas de campo magnético</text>
+            </svg>
+          </div>
+        </div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-btn">Indução eletromagnética (Lei de Faraday) <span class="plus">+</span></button>
+        <div class="accordion-panel"><div class="accordion-inner">
+          <p>O campo magnético variável da bobina induz correntes elétricas no recipiente metálico, aquecendo-o.</p>
+          <div class="eq-block">|ε| = N · |ΔΦ| / Δt
+N = 150 espiras · ΔΦ = 0,006 Wb · Δt = 0,30 s
+
+|ε| = 3,0 V</div>
+          <p>Não basta existir campo magnético — ele precisa variar. Relação com o BioHeat: corrente alternada → campo variável → indução de correntes → aquecimento.</p>
+          <div class="physics-fig" aria-label="Diagrama: panela aquecendo por indução eletromagnética">
+            <svg viewBox="0 0 520 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Panela metálica aquecida por indução eletromagnética">
+              <defs>
+                <marker id="arrowI" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+                  <polygon points="0 0, 8 3, 0 6" fill="#DA9241"/>
+                </marker>
+                <marker id="arrowF" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+                  <polygon points="0 0, 8 3, 0 6" fill="#1B7A72"/>
+                </marker>
+                <linearGradient id="panGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#b0c4c0"/>
+                  <stop offset="100%" stop-color="#7a9490"/>
+                </linearGradient>
+                <linearGradient id="hotGrad" x1="0" y1="1" x2="0" y2="0">
+                  <stop offset="0%" stop-color="#DA9241" stop-opacity="0.05"/>
+                  <stop offset="100%" stop-color="#DA9241" stop-opacity="0.25"/>
+                </linearGradient>
+                <style>
+                  .eddy { stroke-dasharray:120; stroke-dashoffset:120;
+                    animation: drawEddy 1.2s ease forwards; }
+                  .eddy:nth-child(2){ animation-delay:.2s; }
+                  .eddy:nth-child(3){ animation-delay:.4s; }
+                  .coil-line { stroke-dasharray:300; stroke-dashoffset:300;
+                    animation: drawLine2 1.4s ease forwards; }
+                  .heat-ray { opacity:0; animation: fadeHeat 0.6s ease 1.4s forwards; }
+                  @keyframes drawEddy{ to{ stroke-dashoffset:0; } }
+                  @keyframes drawLine2{ to{ stroke-dashoffset:0; } }
+                  @keyframes fadeHeat{ to{ opacity:1; } }
+                  @media(prefers-reduced-motion:reduce){
+                    .eddy,.coil-line{ animation:none; stroke-dashoffset:0; }
+                    .heat-ray{ animation:none; opacity:1; }
+                  }
+                </style>
+              </defs>
+
+              <rect width="520" height="240" fill="#F5FAF8" rx="6"/>
+
+              <!-- coil / indutor at bottom -->
+              <g fill="none" stroke="#0F4F4A" stroke-width="3.5" class="coil-line">
+                <ellipse cx="182" cy="185" rx="9" ry="14"/>
+                <ellipse cx="200" cy="185" rx="9" ry="14"/>
+                <ellipse cx="218" cy="185" rx="9" ry="14"/>
+                <ellipse cx="236" cy="185" rx="9" ry="14"/>
+                <ellipse cx="254" cy="185" rx="9" ry="14"/>
+                <ellipse cx="272" cy="185" rx="9" ry="14"/>
+                <ellipse cx="290" cy="185" rx="9" ry="14"/>
+                <ellipse cx="308" cy="185" rx="9" ry="14"/>
+                <ellipse cx="326" cy="185" rx="9" ry="14"/>
+              </g>
+              <line x1="182" y1="171" x2="326" y2="171" stroke="#0F4F4A" stroke-width="2.2"/>
+              <line x1="182" y1="199" x2="326" y2="199" stroke="#0F4F4A" stroke-width="2.2"/>
+              <text x="260" y="220" font-family="IBM Plex Mono,monospace" font-size="10" fill="#3C5450" text-anchor="middle">Bobina indutora (CA)</text>
+
+              <!-- upward B field arrows between coil and pan -->
+              <g stroke="#1B7A72" stroke-width="1.6" fill="none" marker-end="url(#arrowF)">
+                <line x1="210" y1="168" x2="210" y2="140"/>
+                <line x1="250" y1="168" x2="250" y2="140"/>
+                <line x1="290" y1="168" x2="290" y2="140"/>
+                <line x1="330" y1="168" x2="330" y2="140"/>
+              </g>
+              <text x="348" y="155" font-family="IBM Plex Mono,monospace" font-size="10" fill="#1B7A72">B↑</text>
+
+              <!-- pan body -->
+              <rect x="150" y="105" width="220" height="36" rx="4" fill="url(#panGrad)" stroke="#7a9490" stroke-width="1.5"/>
+              <!-- pan walls -->
+              <rect x="148" y="89" width="4" height="52" rx="2" fill="#9ab0aa"/>
+              <rect x="368" y="89" width="4" height="52" rx="2" fill="#9ab0aa"/>
+              <!-- pan handle left -->
+              <rect x="120" y="100" width="32" height="10" rx="5" fill="#7a9490"/>
+              <!-- pan handle right -->
+              <rect x="368" y="100" width="32" height="10" rx="5" fill="#7a9490"/>
+              <!-- heat fill inside pan -->
+              <rect x="152" y="107" width="216" height="32" rx="2" fill="url(#hotGrad)"/>
+
+              <!-- eddy currents (swirls) inside pan -->
+              <g fill="none" stroke="#DA9241" stroke-width="1.8" marker-end="url(#arrowI)">
+                <path class="eddy" d="M 215 120 C 215 110, 235 110, 235 120 C 235 130, 215 130, 215 120"/>
+                <path class="eddy" d="M 245 120 C 245 110, 265 110, 265 120 C 265 130, 245 130, 245 120"/>
+                <path class="eddy" d="M 275 120 C 275 110, 295 110, 295 120 C 295 130, 275 130, 275 120"/>
+              </g>
+              <text x="254" y="100" font-family="IBM Plex Mono,monospace" font-size="9.5" fill="#DA9241" text-anchor="middle">correntes de Foucault</text>
+
+              <!-- heat rays above pan -->
+              <g stroke="#DA9241" stroke-width="1.4" stroke-linecap="round" class="heat-ray">
+                <line x1="210" y1="88" x2="207" y2="72"/>
+                <line x1="230" y1="88" x2="228" y2="68"/>
+                <line x1="254" y1="88" x2="254" y2="65"/>
+                <line x1="278" y1="88" x2="280" y2="68"/>
+                <line x1="298" y1="88" x2="301" y2="72"/>
+              </g>
+              <text x="254" y="60" font-family="IBM Plex Mono,monospace" font-size="10" fill="#A5691D" text-anchor="middle" class="heat-ray">calor gerado</text>
+
+              <!-- caption -->
+              <text x="260" y="236" font-family="IBM Plex Mono,monospace" font-size="10" fill="#3C5450" text-anchor="middle">Indução eletromagnética — aquecimento do recipiente metálico</text>
+            </svg>
+          </div>
+        </div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-btn">Força magnética sobre condutores <span class="plus">+</span></button>
+        <div class="accordion-panel"><div class="accordion-inner">
+          <p>Princípio usado em um agitador eletromagnético para movimentar soluções durante a preparação da pomada.</p>
+          <div class="eq-block">F = B · I · L · sen θ
+B = 0,15 T · I = 4,0 A · L = 0,25 m · θ = 90°
+
+F = 0,15 N</div>
+        </div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-btn">Energia e aquecimento do BioHeat <span class="plus">+</span></button>
+        <div class="accordion-panel"><div class="accordion-inner">
+          <div class="eq-block">P = V · I  →  P = 220 · 3,5 = 770 W
+
+E = P · t  →  E = 770 · 600 s = 462.000 J = 462 kJ</div>
+          <p>Em 10 minutos, o equipamento utilizaria, no modelo ideal, aproximadamente 462 kJ. Na prática, parte da energia se perde para o ambiente.</p>
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">ONDE A FÍSICA ENTRA NA EMPRESA</div>
+      <h2>Quatro conceitos, quatro aplicações.</h2>
+    </div>
+    <div class="table-scroll">
+      <table class="mini">
+        <tr><th>Conceito</th><th>Aplicação</th></tr>
+        <tr><td>Campo produzido por bobinas</td><td>Produção do campo magnético do BioHeat</td></tr>
+        <tr><td>Lei de Faraday</td><td>Aquecimento por indução</td></tr>
+        <tr><td>Força sobre condutores</td><td>Agitador / mecanismo eletromagnético</td></tr>
+        <tr><td>P = VI e E = Pt</td><td>Análise de consumo e aquecimento</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<nav class="page-nav" aria-label="Navegação entre páginas">
+  <div class="page-nav-inner">
+    <a href="quimica.html" class="prev">
+        <span class="dir mono">&larr; ANTERIOR</span>
+        <span class="ttl">Química</span>
+      </a>
+    <a href="matematica.html" class="next">
+        <span class="dir mono">PRÓXIMO &rarr;</span>
+        <span class="ttl">Matemática</span>
+      </a>
+  </div>
+</nav>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>DermaNova — projeto fictício desenvolvido para fins escolares. Colégio Franciscano Nossa Senhora do Carmo, 2026.</p>
+    <p class="mono">CIÊNCIAS DA NATUREZA E MATEMÁTICA</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
